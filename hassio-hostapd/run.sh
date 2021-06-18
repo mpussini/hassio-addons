@@ -125,6 +125,7 @@ sleep 1
 if test ${DHCP_SERVER} = true; then
     # Setup hdhcpd.conf
     UCONFIG="/etc/udhcpd.conf"
+	LEASES="/var/lib/udhcpd/udhcpd.leases"
 
     echo "Setup udhcpd ..."
     echo "interface    ${INTERFACE}"     >> ${UCONFIG}
@@ -135,6 +136,9 @@ if test ${DHCP_SERVER} = true; then
     echo "opt router   ${DHCP_ROUTER}"   >> ${UCONFIG}
     echo ""                              >> ${UCONFIG}
 
+	echo "creating udhcpd.leases file ..."
+	echo "" >> ${LEASES}
+	
     echo "Starting DHCP server..."
     udhcpd -f &
 fi
