@@ -1,10 +1,10 @@
 {
   "name": "Hassio Hostapd Extended",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "slug": "hassio-hostapd-extended",
   "description": "Access point for your IoT devives with configurable network interface and DHCP server",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
-  "url": "https://github.com/joaofl/hassio-addons/tree/master/hassio-hostapd",
+  "url": "https://github.com/mpussini/hassio-addons/tree/master/hassio-hostapd",
   "startup": "system",
   "boot": "auto",
   "host_network": true,
@@ -31,6 +31,7 @@
   "options": {
     "ssid": "",
     "wpa_passphrase": "",
+	"country_iso2": "IT",
     "channel": "0",
     "address": "192.168.2.1",
     "netmask": "255.255.255.0",
@@ -47,6 +48,7 @@
   "schema": {
     "ssid": "str",
     "wpa_passphrase": "str",
+    "country_iso2": "str",
     "channel": "int",
     "address": "str",
     "netmask": "str",

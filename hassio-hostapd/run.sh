@@ -24,6 +24,7 @@ CONFIG_PATH=/data/options.json
 
 SSID=$(jq --raw-output ".ssid" $CONFIG_PATH)
 WPA_PASSPHRASE=$(jq --raw-output ".wpa_passphrase" $CONFIG_PATH)
+COUNTRY_ISO2=$(jq --raw-output ".country_iso2" $CONFIG_PATH)
 CHANNEL=$(jq --raw-output ".channel" $CONFIG_PATH)
 ADDRESS=$(jq --raw-output ".address" $CONFIG_PATH)
 NETMASK=$(jq --raw-output ".netmask" $CONFIG_PATH)
@@ -102,6 +103,7 @@ echo "ssid=${SSID}" >> ${HCONFIG}
 echo "wpa_passphrase=${WPA_PASSPHRASE}" >> ${HCONFIG}
 echo "channel=${CHANNEL}" >> ${HCONFIG}
 echo "interface=${INTERFACE}" >> ${HCONFIG}
+echo "country_code=${COUNTRY_ISO2}" >> ${HCONFIG}
 echo "" >> ${HCONFIG}
 
 # Setup interface
