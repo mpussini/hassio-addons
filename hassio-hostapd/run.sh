@@ -136,7 +136,7 @@ if test ${DHCP_SERVER} = true; then
     echo "opt router   ${DHCP_ROUTER}"   >> ${UCONFIG}
     echo ""                              >> ${UCONFIG}
 
-	echo "creating udhcpd.leases file ..."
+	echo "Creating udhcpd.leases file ..."
 	echo "" >> ${LEASES}
 	
     echo "Starting DHCP server..."
